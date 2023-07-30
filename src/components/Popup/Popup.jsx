@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 import InputMask from 'react-input-mask';
 
-function Popup({setPopupOpen}) {
+function Popup({ setPopupOpen }) {
   const [userPhone, setUserPhone] = React.useState('');
   const [phoneError, setPhoneError] = React.useState('');
   const [phoneDirty, setPhoneDirty] = React.useState(false);
@@ -35,21 +35,17 @@ function Popup({setPopupOpen}) {
   const onSubmit = (e) => {
     e.preventDefault();
     let formData = new FormData();
+    var xhr = new XMLHttpRequest();
+    formData.append('phone', userPhone);
 
-    formData.append("phone", userPhone);
-
-    fetch("send.php", {
-      method: "POST",
-      body: formData,
-      headers: {
-        "Content-Type": "multipart/form-data"
-      }
-    }).then(response => {
-      response.json().then(data => {
-        console.log("Successful" + data);
-      });
-    });
-  }
+    xhr.open(
+      'GET',
+      'http://localgost:3000/sendemail/index.php'
+    );
+    
+    xhr.send();
+    
+  };
 
   return (
     <div className="modal">
@@ -70,7 +66,7 @@ function Popup({setPopupOpen}) {
           Отправить
         </button>
       </form>
-      <img src="close.svg" onClick={() => setPopupOpen(false)} alt='Закрыть'/>
+      <img src="close.svg" onClick={() => setPopupOpen(false)} alt="Закрыть" />
     </div>
   );
 }
