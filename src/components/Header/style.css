@@ -7,6 +7,7 @@
 
 .header span {
   font-size: 14px;
+  display: block;
 }
 
 .header-shadow {
@@ -35,12 +36,20 @@
 
 .header-center {
   line-height: 30px;
+  display: flex;
+  column-gap: 20px;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
 }
+
 
 .header-right {
   display: flex;
-  gap: 40px;
+  column-gap: 40px;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
   line-height: 30px;
+  align-items: center;
 }
 
 
@@ -73,10 +82,22 @@
     
   }
 
-  .header-left img{
-    content: url(../../../public/logo-2.svg);
-    width: 100px;
-    padding: 0;
+    
+  .header-left img:nth-child(1){
+    /* display: none; */
+    width: 100px ;
+
+
+  }
+
+  .header-right p:nth-child(1) {
+    display: none;
+  }
+
+  .header-right img:nth-child(2){
+    display: none;
+    max-width: 200px ;
+
   }
   #container__header {
     justify-content: center;

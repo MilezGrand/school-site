@@ -4,11 +4,10 @@ import './style.css';
 const About = ({ sectionRef }) => {
   return (
     <section className="about" ref={sectionRef}>
-      <img src="deco3.svg" id="main-deco-3" alt="декоративныей элемент" />
-      <img src="deco4.svg" id="main-deco-4" alt="декоративныей элемент" />
-      <div className="container" id="container__about">
-        <div className="container__about_info">
-          <div>
+      
+      <div className="container " id="container__about" >
+        <div className="container__about_info ">
+          <div className='reveal'>
             <img src="photo_2.png" width="100%" alt="Ученики" />
             <h2 id='mobile-h2'>
               О НАШЕЙ <span className="colored-span">ШКОЛЕ</span>
@@ -21,7 +20,7 @@ const About = ({ sectionRef }) => {
               легким их последующим применением в реальных языковых ситуациях.
             </article>
           </div>
-          <div>
+          <div  className='reveal'>
             <h2 id='mobile-h2-2'>
               <span className="colored-span">ИСТОРИЯ</span> СОЗДАНИЯ
             </h2>
@@ -42,7 +41,7 @@ const About = ({ sectionRef }) => {
           
         </div>
 
-        <div className="missions">
+        <div className="missions reveal">
           <h2>
             <span className="colored-span">ОСНОВНЫЕ</span> ЗАДАЧИ
           </h2>
@@ -59,6 +58,8 @@ const About = ({ sectionRef }) => {
           </ul>
         </div>
       </div>
+      <img src="deco3.svg" id="main-deco-3" alt="декоративныей элемент" />
+      <img src="deco4.svg" id="main-deco-4" alt="декоративныей элемент" />
     </section>
   );
 };

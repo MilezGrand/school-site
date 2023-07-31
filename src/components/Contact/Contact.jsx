@@ -12,7 +12,7 @@ const Contact = ({ sectionRef, setPopupOpen, popupOpen }) => {
       {/* <div className="container" id="container__contact"> */}
       <div className="contact_info">
         <div className="contact_info_socials">
-          <img src="logo-2.svg" alt="" width={200} height={200} id={'contact_logo'}/>
+          <img src="logo-3.svg" alt="" width={100} height={100} id={'contact_logo'}/>
           <div>
             <h4>Контактная информация:</h4>
 
@@ -28,7 +28,7 @@ const Contact = ({ sectionRef, setPopupOpen, popupOpen }) => {
 
             <span>
               <img src="insta-icon.png" alt="Инстаграм" width={25} />
-              <a href="#">@tdu.school</a>
+              <a href="https://www.instagram.com/tdu.school">@tdu.school</a>
             </span>
 
             <span>

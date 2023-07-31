@@ -3,7 +3,7 @@ import './style.css';
 function Education({ sectionRef }) {
   return (
     <section className="education" ref={sectionRef}>
-      <div className="container" id="container__education">
+      <div className="container reveal" id="container__education" >
         <h2>
           <span className="colored-span">Распорядок</span> дня
         </h2>

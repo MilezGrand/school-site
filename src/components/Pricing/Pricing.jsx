@@ -4,7 +4,7 @@ import './style.css';
 function Pricing({ sectionRef }) {
   return (
     <section className="pricing" ref={sectionRef}>
-      <div className="container" id="container__pricing">
+      <div className="container reveal" id="container__pricing" >
         <h1>Стоимость обучения в частной школе</h1>
         <div className="container__pricing_items">
           <div>

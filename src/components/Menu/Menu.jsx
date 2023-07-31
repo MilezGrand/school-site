@@ -60,7 +60,7 @@ function Menu({ mainRef, aboutRef, admissionRef, pricingRef, educationRef, conta
         <li>
           <NavLink
             onClick={() => {
-              window.scrollTo(0, pricing.current.offsetTop - 250);
+              window.scrollTo(0, pricing.current.offsetTop - 150);
               menu.current.classList.add('menu-closed');
             }}
           >

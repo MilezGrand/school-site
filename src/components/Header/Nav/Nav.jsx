@@ -34,17 +34,20 @@ const Nav = ({
     if (element == null) {
       return;
     }
+    // console.log(element.current.offsetTop)
     if (
-      scrollPosition + 500 >= element.current.offsetTop &&
-      scrollPosition + 500 <= element.current.offsetTop + element.current.offsetHeight &&
+      scrollPosition + 600 >= element.current.offsetTop &&
+      scrollPosition + 600 <= element.current.offsetTop + element.current.offsetHeight &&
       scrollPosition + 1250 < document.body.scrollHeight
     ) {
+      
       return true;
     } else if (
       element === contact &&
       scrollPosition + 400 >= element.current.offsetTop - 400 &&
       scrollPosition + 400 <= element.current.offsetTop + element.current.offsetHeight + 300
     ) {
+      
       return true;
     }
 
@@ -104,7 +107,7 @@ const Nav = ({
               Контакты
             </NavLink>
           </li>
-
+          <img src="logo-3.svg" alt="Территория добра и успеха" width={80} />
           <img
             src="menu.svg"
             width={35}

@@ -18,6 +18,8 @@
   justify-content: space-between;
   font-size: 18px;
   column-gap: 60px;
+  -webkit-column-gap: 60px;
+  -moz-column-gap: 60px;
 }
 
 table {

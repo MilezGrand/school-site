@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-function Main({ sectionRef, setPopupOpen, popupOpen }) {
+function Main({ sectionRef, setPopupOpen }) {
   const onContactClick = () => {
     setPopupOpen(true)
   }
@@ -10,7 +10,7 @@ function Main({ sectionRef, setPopupOpen, popupOpen }) {
     <section className="main" ref={sectionRef}>
       <img src="deco1.svg" id="main-deco-1" alt="декоративныей элемент" />
       <img src="deco2.svg" id="main-deco-2" alt="декоративныей элемент" />
-      <div className="container" id="container__main">
+      <div className="container show" id="container__main" >
         <div className="main-left">
           <h1>Частная англо-китайская школа в Екатеринбурге</h1>
           <p>

@@ -11,6 +11,35 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow-y: hidden; */
+}
+
+html {
+  --scrollbarBG: #fff;
+  --thumbBG: #a5a5a5;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
 
 a {
@@ -62,20 +91,20 @@ button {
 }
 
 button:hover {
-  background-color: #F35800 !important;
-  border: 4px solid #F35800 !important;
+  background-color: #f35800 !important;
+  border: 4px solid #f35800 !important;
   color: #fff;
 }
 
 button:active {
-  background-color: #211E20 !important;
+  background-color: #211e20 !important;
   border: 4px solid #000 !important;
   color: #fff;
-} 
+}
 
 button:disabled {
   color: lightgray;
-  border: 3px solid grey ;
+  border: 3px solid grey;
 }
 button:disabled:hover {
   background: #fff !important;
@@ -93,8 +122,16 @@ hr {
   max-width: 1300px;
   margin: 0 auto;
   height: 100%;
+  
 }
 
+.show {
+  animation: showup 0.5s ;
+}
+
+.reveal {
+  opacity: 0;
+}
 .colored-span {
   color: #e72485;
 }
@@ -114,5 +151,16 @@ hr {
   }
   h2 {
     padding: 0 15px 0 15px;
+  }
+}
+
+@keyframes showup {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

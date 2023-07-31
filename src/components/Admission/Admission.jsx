@@ -4,7 +4,7 @@ import './style.css';
 const Admission = ({ sectionRef }) => {
   return (
     <section className="admission" ref={sectionRef}>
-      <div className="container" id="container__admission">
+      <div className="container reveal" id="container__admission">
         <h2>
           Как <span className="colored-span">поступить</span> в школу?
         </h2>

@@ -11,11 +11,11 @@ export const Header = ({
   contactRef,
   menuRef,
   popupOpen,
-  setPopupOpen
+  setPopupOpen,
 }) => {
   const onContactClick = () => {
-    setPopupOpen(true)
-  }
+    setPopupOpen(true);
+  };
 
   return (
     <header className="header">
@@ -23,14 +23,15 @@ export const Header = ({
         <div className="header-left">
           <img src="logo.svg" alt="Территория добра и успеха" width={250} />
         </div>
-        <div className="header-center">
+        <div className="header-center"></div>
+        <div className="header-right">
           <p>
             Наш адрес:
             <br /> Екатеринбург, ул.Цилковского, 29 (Е)
+            <span>7 минут от метро Чкаловская</span>
           </p>
-          <span>7 минут от метро Чкаловская</span>
-        </div>
-        <div className="header-right">
+
+          <img src="logo-2.svg" alt="Территория добра и успеха" width={100} />
           <button onClick={onContactClick}>Заказать звонок</button>
           <p>
             <strong>+7 (919) 368-26-27 </strong>
@@ -41,7 +42,7 @@ export const Header = ({
           </p>
         </div>
       </div>
-      
+
       <Nav
         mainRef={mainRef}
         aboutRef={aboutRef}
