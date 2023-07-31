@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: rgba(45, 46, 50, 0.8);;
+  background-color: rgba(45, 46, 50, 0.8);
   overflow-y: hidden;
   top: 0;
   z-index: 1;
@@ -21,7 +21,7 @@
   border-radius: 12px;
   position: fixed;
   max-width: 350px;
-  height: 450px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -32,8 +32,8 @@
   margin-bottom: auto;
   flex-direction: column;
   z-index: 2;
-  opacity: 1 ;
-  
+  opacity: 1;
+
   -webkit-animation: popup 0.3s;
   -moz-animation: popup 0.3s;
   -ms-animation: popup 0.3s;
@@ -44,10 +44,24 @@
 form {
   display: flex;
   flex-direction: column;
-  margin: 25px 50px 50px 50px;
+  margin: 0 50px 25px 50px;
   height: 300px;
   justify-content: space-around;
   align-items: center;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  min-height: 130px;
+  justify-content: space-between;
+}
+
+form span {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 15px 0 15px 0;
 }
 
 input[type='tel'] {
@@ -59,14 +73,25 @@ input[type='tel'] {
   padding: 0 15px 0 15px;
 }
 
-input[type='tel']:focus {
+input[type='text'] {
+  height: 50px;
+  width: 200px;
+  border: 1px solid #2d2e32;
+  border-radius: 10px;
+  font-size: 21px;
+  padding: 0 15px 0 15px;
+}
+
+input:focus {
   outline: none;
 }
 
 input {
-  margin-bottom: 25px;
+  display: block;
+  /* margin-bottom: 25px; */
 }
-.modal img {
+
+.closeForm {
   cursor: pointer;
   width: 35px;
   position: absolute;
@@ -74,24 +99,29 @@ input {
   right: 15px;
 }
 
+.successForm {
+  display: flex;
+  flex-direction: column;
+}
+
 .modal h3 {
   margin: 25px;
 }
 
 @keyframes popup {
-  0%{
+  0% {
     transform: scale(0.9);
   }
-  100%{
+  100% {
     transform: scale(1);
   }
 }
 
 @keyframes fadein {
-  0%{
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

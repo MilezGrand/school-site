@@ -12,7 +12,13 @@
   grid-row-gap: 50px;
 }
 
+.mobile {
+  display: none;
+}
 
+.container__about_info h2:nth-child(2) {
+  margin-top: 50px;
+}
 .container__about_info div {
   padding: 25px;
   /* display: flex; */
@@ -80,11 +86,11 @@
     width: 150px;
     transform: scaleX(-1);
     left: 0;
-    top: 2080px;
+    top: 2120px;
   }
   #main-deco-4 {
     width: 150px;
-    top: 830px;
+    top: 1270px;
     transform: scaleX(-1);
     right: 0;
     
@@ -107,9 +113,15 @@
   }
 
   #mobile-h2 {
+    margin: 0 0 15px 0;
     padding: 15px 0 0 0;
   }
   #mobile-h2-2 {
+    margin: 0 0 15px 0;
     padding: 0;
+  }
+
+  .desktop {
+    display: none;
   }
 }

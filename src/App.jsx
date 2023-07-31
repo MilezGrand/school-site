@@ -28,14 +28,6 @@ function App() {
   const reveals = document.querySelectorAll('.reveal');
   const scrollPosition = useScrollPosition();
 
-  var myScrollFunc = function () {
-    // for (let char = 0; char < reveals.length; char++) {
-    //   if (scrollPosition >= char.offsetTop) {
-    //     char.classList.add('show')
-    //     // console.log(reveals)
-    //   }
-    // }
-  };
 
   React.useEffect(() => {
     popupOpen

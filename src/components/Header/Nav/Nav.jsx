@@ -53,10 +53,10 @@ const Nav = ({
 
     return false;
   };
-  // console.log()
+
   return (
     <nav  className={(window.innerWidth > 1100) ? (scrollPosition > 130) ? 'nav sticky' : 'nav' :  (scrollPosition > 80) ? 'nav sticky' : 'nav' } >
-      <div className="container">
+      <div className="container" id='nav-container'>
         <ul>
           <li>
             <NavLink
@@ -77,7 +77,7 @@ const Nav = ({
           <li>
             <NavLink
               className={calculatePosition(pricing) ? 'activeLink' : ''}
-              onClick={() => window.scrollTo(0, pricing.current.offsetTop - 250)}
+              onClick={() => window.scrollTo(0, pricing.current.offsetTop - 350)}
             >
               Стоимость
             </NavLink>

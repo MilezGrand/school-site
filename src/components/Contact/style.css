@@ -48,12 +48,7 @@
   align-items: center;
 }
 
-.location {
-  background-image: url('../../../public/location.png');
-  background-size: contain;
-  /* width: 650px; */
-  /* height: 400px; */
-}
+
 
 #contact_button {
   position: absolute;
@@ -72,6 +67,13 @@
   height: 400px;
   width: 700px;
 }
+
+@media screen and (max-width: 1450px) {
+  #contact_button {
+    left: 400px;
+  }
+}
+
 
 @media screen and (max-width: 1100px) {
   #contact_button {
