@@ -1,7 +1,7 @@
-import React from 'react';
-import './style.css';
-import { NavLink } from 'react-router-dom';
-import { useScrollPosition } from '../../../hooks/useScrollPosition';
+import React from "react";
+import "./style.css";
+import { NavLink } from "react-router-dom";
+import { useScrollPosition } from "../../../hooks/useScrollPosition";
 
 const Nav = ({
   mainRef,
@@ -20,7 +20,6 @@ const Nav = ({
   const [education, setEducation] = React.useState(null);
   const [contact, setContact] = React.useState(null);
 
-
   React.useEffect(() => {
     setMain(mainRef);
     setAbout(aboutRef);
@@ -37,17 +36,17 @@ const Nav = ({
     // console.log(element.current.offsetTop)
     if (
       scrollPosition + 600 >= element.current.offsetTop &&
-      scrollPosition + 600 <= element.current.offsetTop + element.current.offsetHeight &&
+      scrollPosition + 600 <=
+        element.current.offsetTop + element.current.offsetHeight &&
       scrollPosition + 1250 < document.body.scrollHeight
     ) {
-      
       return true;
     } else if (
       element === contact &&
       scrollPosition + 400 >= element.current.offsetTop - 400 &&
-      scrollPosition + 400 <= element.current.offsetTop + element.current.offsetHeight + 300
+      scrollPosition + 400 <=
+        element.current.offsetTop + element.current.offsetHeight + 300
     ) {
-      
       return true;
     }
 
@@ -55,12 +54,22 @@ const Nav = ({
   };
 
   return (
-    <nav  className={(window.innerWidth > 1100) ? (scrollPosition > 130) ? 'nav sticky' : 'nav' :  (scrollPosition > 80) ? 'nav sticky' : 'nav' } >
-      <div className="container" id='nav-container'>
+    <nav
+      className={
+        window.innerWidth > 1100
+          ? scrollPosition > 130
+            ? "nav sticky"
+            : "nav"
+          : scrollPosition > 80
+          ? "nav sticky"
+          : "nav"
+      }
+    >
+      <div className="container" id="nav-container">
         <ul>
           <li>
             <NavLink
-              className={calculatePosition(main) ? 'activeLink' : ''}
+              className={calculatePosition(main) ? "activeLink" : ""}
               onClick={() => window.scrollTo(0, 0)}
             >
               Главная
@@ -68,7 +77,7 @@ const Nav = ({
           </li>
           <li>
             <NavLink
-              className={calculatePosition(about) ? 'activeLink' : ''}
+              className={calculatePosition(about) ? "activeLink" : ""}
               onClick={() => about.current.scrollIntoView()}
             >
               О школе
@@ -76,15 +85,17 @@ const Nav = ({
           </li>
           <li>
             <NavLink
-              className={calculatePosition(pricing) ? 'activeLink' : ''}
-              onClick={() => window.scrollTo(0, pricing.current.offsetTop - 350)}
+              className={calculatePosition(pricing) ? "activeLink" : ""}
+              onClick={() =>
+                window.scrollTo(0, pricing.current.offsetTop - 350)
+              }
             >
               Стоимость
             </NavLink>
           </li>
           <li>
             <NavLink
-              className={calculatePosition(education) ? 'activeLink' : ''}
+              className={calculatePosition(education) ? "activeLink" : ""}
               onClick={() => education.current.scrollIntoView()}
             >
               Расписание
@@ -92,7 +103,7 @@ const Nav = ({
           </li>
           <li>
             <NavLink
-              className={calculatePosition(admission) ? 'activeLink' : ''}
+              className={calculatePosition(admission) ? "activeLink" : ""}
               onClick={() => admission.current.scrollIntoView()}
             >
               Поступление
@@ -101,23 +112,24 @@ const Nav = ({
 
           <li>
             <NavLink
-              className={calculatePosition(contact) ? 'activeLink' : ''}
+              className={calculatePosition(contact) ? "activeLink" : ""}
               onClick={() => contact.current.scrollIntoView()}
             >
               Контакты
             </NavLink>
           </li>
-          <img src="logo-3.svg" alt="Территория добра и успеха" width={80} />
-          <img
-            src="menu.svg"
-            width={35}
-            height={35}
-            id="menu"
-            alt="menu"
-            onClick={() => {
-              menuRef.current.classList.remove('menu-closed');
-            }}
-          />
+          <img src="logo-mini.svg" alt="Территория добра и успеха" width={80} />
+          <div id="menu">
+            <img
+              src="menu.svg"
+              width={35}
+              height={35}
+              alt="menu"
+              onClick={() => {
+                menuRef.current.classList.remove("menu-closed");
+              }}
+            />
+          </div>
         </ul>
       </div>
     </nav>

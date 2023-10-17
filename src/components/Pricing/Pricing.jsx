@@ -1,29 +1,33 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 function Pricing({ sectionRef }) {
   return (
     <section className="pricing" ref={sectionRef}>
-      <div className="container reveal" id="container__pricing" >
-        <h1>Стоимость обучения в частной школе</h1>
+      <div className="container reveal" id="container__pricing">
+        <h2>
+          Стоимость <span className="colored-span">обучения</span>
+        </h2>
         <div className="container__pricing_items">
-          <div>
-            Система{' '}
-            <span className="colored-span">
-              «Все включено»: <br />
-              45 000 рублей
-            </span>{' '}
-            в месяц
-            <br />
-            (Учебный год 405 000 рублей)
+          <div className="container__pricing_item">
+            <div>
+              <span className="colored-span">Система «Все включено» </span>
+              45 000 рублей в месяц
+              <br />
+              (Учебный год 405 000 рублей)
+            </div>
           </div>
-          <div>
-            Организационный сбор:
-            <br /> <span className="colored-span">30 000 рублей</span> один раз в год
+          <div className="container__pricing_item">
+            <div>
+              <span className="colored-span">Организационный сбор:</span>
+              30 000 рублей один раз в год
+            </div>
           </div>
-          <div>
-            Аттестационный сбор: <br />
-            <span className="colored-span">7 000 рублей</span> один раз в год
+          <div className="container__pricing_item">
+            <div>
+              <span className="colored-span">Аттестационный сбор:</span>7 000
+              рублей один раз в год
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import './style.css';
-import Nav from './Nav/Nav';
+import React from "react";
+import "./style.css";
+import Nav from "./Nav/Nav";
 
 export const Header = ({
   mainRef,
@@ -22,16 +22,14 @@ export const Header = ({
       <div className="container" id="container__header">
         <div className="header-left">
           <img src="logo.svg" alt="Территория добра и успеха" width={250} />
-        </div>
-        <div className="header-center"></div>
-        <div className="header-right">
           <p>
             Наш адрес:
             <br /> Екатеринбург, ул.Цилковского, 29 (Е)
             <span>7 минут от метро Чкаловская</span>
           </p>
-
-          <img src="logo-2.svg" alt="Территория добра и успеха" width={100} />
+        </div>
+        <div className="header-center"></div>
+        <div className="header-right">
           <button onClick={onContactClick}>Заказать звонок</button>
           <p>
             <strong>+7 (919) 368-26-27 </strong>

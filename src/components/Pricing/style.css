@@ -1,7 +1,8 @@
 .pricing {
-  background-color: #fdeee5;
+  /* background-color: #fdeee5; */
   position: relative;
-  background-image: url('../../../public/main-background.png');
+  background-image: url("../../../public/main-background.png");
+  background-size: cover;
 }
 
 #container__pricing {
@@ -9,18 +10,14 @@
   flex-direction: column;
 }
 
-#container__pricing h1 {
-  text-align: center;
+#container__pricing h2 {
+  padding: 50px 0 50px 0;
 }
-
 .container__pricing_items {
   display: flex;
   flex-direction: row;
-  text-align: center;
   justify-content: space-between;
-
-  padding: 0 100px 0 100px;
-  font-family: 'Rubik';
+  font-family: "Rubik";
   font-size: 21px;
   font-weight: 300;
   line-height: 30px;
@@ -29,11 +26,29 @@
   margin-bottom: 50px;
 }
 
+.container__pricing_items .colored-span {
+  display: block;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.container__pricing_item {
+  display: flex;
+}
+
+.container__pricing_items .container__pricing_item::before {
+  display: inline-block;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  border: 6px solid #e72485;
+  margin-right: 10px;
+}
+
 @media screen and (max-width: 1100px) {
   .container__pricing_items {
-    justify-content: center;
     flex-direction: column;
-    padding: 30px 0 0 0;
     gap: 50px;
   }
 }

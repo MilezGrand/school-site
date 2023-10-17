@@ -1,10 +1,15 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 function Footer() {
   return (
     <footer>
-      <span>© {new Date().getFullYear()} Частная начальная школа «Территория добра и успеха».</span>
+      <div className="container">
+        <span>
+          © {new Date().getFullYear()} Частная начальная школа «Территория добра
+          и успеха».
+        </span>
+      </div>
     </footer>
   );
 }

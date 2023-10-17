@@ -1,15 +1,13 @@
 .menu {
-  background-color: white;
+  background-color: var(--cyan);
+
   width: 100vw;
   height: 150vh;
   position: fixed;
   z-index: 2;
   transition: 250ms;
-  /* right: 100vw; */
   right: 0;
   margin: 0;
-  /* height: 100%; */
-  /* overflow-y: hidden */
 }
 
 .menu-closed {
@@ -17,7 +15,7 @@
   
 }
 
-.menu img {
+#close-menu {
   position: absolute;
   top: 15px;
   right: 20px;
@@ -27,7 +25,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* flex-grow: 2; */
   height: 100vh;
   max-width: 350px;
   padding: 0;
@@ -39,8 +36,13 @@
   font-size: 23px;
   padding: 15px;
   text-align: center;
+  
 }
 
 .menu a:active {
   color: #E72485;
+}
+
+.menu a {
+  color: #fff;
 }
